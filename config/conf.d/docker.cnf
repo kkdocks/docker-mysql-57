@@ -1,6 +1,6 @@
 [mysqld]
 # 最大连接数
-max_connections=300
+max_connections=1000
 # 指定单个查询可以使用的缓冲区的大小，一般默认值是1M
 # query_cache_limit=1M
 # 查询的缓存大小设置
@@ -8,7 +8,7 @@ max_connections=300
 # 设置缓存的类型 (0表示禁用缓存 / 1缓存所有结果)
 # query_cache_type=1
 # 用户连接数的最大值设置
-max_user_connections=100
+max_user_connections=300
 # 超时等待时间,单位秒,一个connection在若干秒内无响应，则服务器切断与这个客户端的连接
 wait_timeout=9000
 # 客户端与服务器建立连接时,服务器返回错误的握手协议前,等待数据包到来的最大时间,单位秒
