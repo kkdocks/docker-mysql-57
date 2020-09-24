@@ -6,8 +6,8 @@ node {
   }
 
   stage('Build'){
-      sh "docker build -t ${env.HARBOR_ADDRESS}/library/mysql57 ."
+      sh "docker build -t ${env.HARBOR_ADDRESS}/base-repos/mysql-5.7:v${env.BUILD_ID} ."
       sh "docker login -u${env.HARBOR_USER} -p${env.HARBOR_PWD} ${env.HARBOR_ADDRESS}"
-      sh "docker push ${env.HARBOR_ADDRESS}/library/mysql57"
+      sh "docker push ${env.HARBOR_ADDRESS}/base-repos/mysql-5.7:v${env.BUILD_ID}"
   }
 }
