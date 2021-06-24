@@ -16,7 +16,7 @@ services:
     volumes:
       - "./config/conf.d:/etc/mysql/conf.d"
       - "./data/mysql:/var/lib/mysql"
-      - "./data/mysql-files:/var/lib/mysql-files"
+#      - "./data/mysql-files:/var/lib/mysql-files"
     restart: always
     privileged: true
 
